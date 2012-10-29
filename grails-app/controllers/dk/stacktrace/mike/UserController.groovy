@@ -1,6 +1,7 @@
 package dk.stacktrace.mike
 
 import org.springframework.dao.DataIntegrityViolationException
+import dk.stacktrace.mike.User
 
 class UserController {
 
@@ -12,9 +13,25 @@ class UserController {
 
     def login = { }
 
-    def logout = { }
+    def logout = { 
+	flash.message = "Goodbye ${session.user}"
+      	session.user = null
 
-    def authenticate = { }
+	redirect(action:"login")
+    }
+
+    def authenticate = { 
+      def user = User.findByUserNameAndPassword(params.userName, params.password)
+      
+      if(user){ 
+	session.user = user
+	flash.message = "Welcome ${user}"
+	redirect(controller:"car", action:"list")
+      }else{ 
+	flash.message = "Sorry, ${params.userName}. Please try again"
+	redirect(action:"login")
+      }
+    }
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)

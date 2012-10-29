@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'login', 'error')} required">
-	<label for="login">
-		<g:message code="user.login.label" default="Login" />
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'userName', 'error')} required">
+	<label for="userName">
+		<g:message code="user.userName.label" default="User Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="login" required="" value="${userInstance?.login}"/>
+	<g:textField name="userName" required="" value="${userInstance?.userName}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
