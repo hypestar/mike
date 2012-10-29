@@ -1,7 +1,5 @@
 package dk.stacktrace.mike
 
-import dk.stacktrace.mike.ShoppingCart
-
 class User {
   String userName
   String password

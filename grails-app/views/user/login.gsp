@@ -19,7 +19,7 @@
 		     <h1><g:message code="Login" args="[entityName]" /></h1>
 		<g:if test="${flash.message}">
 		<div class="message" role="status">${flash.message}</div>
-		</g:if>
+	</g:if>
 
 		<g:form action="authenticate" >
 			<fieldset class="form">
@@ -28,7 +28,7 @@
 			     	    <g:message code="user.userName.label" default="User Name" />
 			       	    <span class="required-indicator">*</span>
 				    </label>
-			<g:textField name="userName" required="" value="${userInstance?.userName}"/>
+			<g:textField name="userName" required="" value="${userNameCookie}"/>
 		</div>
 
 		<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">

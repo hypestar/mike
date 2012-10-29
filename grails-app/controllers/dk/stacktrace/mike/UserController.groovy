@@ -21,7 +21,11 @@ class UserController {
         redirect(action: "list", params: params)
     }
 
-    def login = { }
+    def login = { 
+      def String userNameCookie = request.getCookie("username")
+      flash.message = "Username from cookie ${userNameCookie}"
+      [userNameCookie: userNameCookie]
+    }
 
     def logout = { 
 	flash.message = "Goodbye ${session.user}"
@@ -35,6 +39,7 @@ class UserController {
       
       if(user){ 
 	session.user = user
+	response.setCookie("username", "${user.userName}", 60000)
 	flash.message = "Welcome ${user}"
 	redirect(controller:"car", action:"list")
       }else{ 
