@@ -598,33 +598,9 @@ a.skip {
 /* Mike Miniature Customization */
 #header {
 background: #48802c;
-padding: 2em 1em 2em 1em;
-margin-bottom: 1em;
+padding: 1em 1em 1em 1em;
+//margin-bottom: 1em;
 overflow: hidden; /* will contain if #first is longer than #second */
 }
 
-a.header-main:link, a.header-main:visited{
-color:  #fff;
-font-size: 3em;
-font-weight: bold;
-}
 
-.header-sub {
-color: #fff;
-font-size: 1.25em;
-font-style:italic;
-}
-
-
-#headerLeft {
-
-    float:left; /* add this */
-   // border: 1px solid red;
-}
-
-#mikeLogo {
-   // border: 1px solid green;
-    overflow: hidden; /* if you don't want #second to wrap below #first */
-    padding:left 20px
-    align:right
-}

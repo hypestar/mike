@@ -1,11 +1,4 @@
 <div id=header>
-<div id="headerLeft">
-     <p><a class="header-main" href="${resource(dir:'')}">Mike's Miniature Models</a></p>
-<p class="header-sub">Webshop</p>
-</div>
+     <a class="header-main" href="${resource(dir:'')}"><img src="${resource(dir: 'images', file: 'logo.png')}" alt="Mike's logo"/>
 
-<div id="mikeLogo">
-<a href="http://grails.org"><img src="${resource(dir: 'images', file: 'beetle_header.png')}" alt="Grails"/>
-</a>
-</div>
 </div>
