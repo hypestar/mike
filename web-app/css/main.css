@@ -596,11 +596,23 @@ a.skip {
 }
 
 /* Mike Miniature Customization */
-#header {
+.header {
 background: #48802c;
 padding: 1em 1em 1em 1em;
 //margin-bottom: 1em;
 overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+.header a {
+color:white;    
+}
+
+.header p {
+color:white;
+}
+
+#header_text {
+color:white;
 }
 
 

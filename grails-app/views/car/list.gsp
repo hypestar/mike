@@ -53,7 +53,9 @@
 						<td>${fieldValue(bean: carInstance, field: "carType")}</td>
 					
 						<td>${fieldValue(bean: carInstance, field: "productionYear")}</td>
-					
+						
+						<td><g:link controller="cart" action="add" id="${carInstance.id}"><img src="${resource(dir: 'images', file: 'cart.png')}" height="32" width="32" alt="add to shopping cart"/></g:link></td>
+											
 					</tr>
 				</g:each>
 				</tbody>

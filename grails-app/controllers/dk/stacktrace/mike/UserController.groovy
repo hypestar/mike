@@ -2,6 +2,7 @@ package dk.stacktrace.mike
 
 import org.springframework.dao.DataIntegrityViolationException
 import dk.stacktrace.mike.User
+import dk.stacktrace.mike.Cart
 
 class UserController {
 
@@ -40,6 +41,7 @@ class UserController {
       if(user){ 
 	session.user = user
 	response.setCookie("username", "${user.userName}", 60000)
+	session["cart"] = new Cart(user)
 	flash.message = "Welcome ${user}"
 	redirect(controller:"car", action:"list")
       }else{ 
